@@ -8,57 +8,82 @@
     <style>
         /* General body and background setup */
         body {
-            background-color: #181818;
+            background-color: #121212;
+            background-image: url('https://i.gifer.com/5ARz.gif'); /* Replace with a valid image URL */
+            background-size: cover;
             color: #e0e0e0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Cooper Black', Britannic Bold;
             margin: 0;
             padding: 0;
             overflow-x: hidden;
+            background-position: center;
+            background-attachment: fixed;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
             text-align: center; /* Centers the text for the entire body */
         }
 
         /* Header style */
         header {
-            background-color: rgba(40, 40, 40, 0.8);
-            padding: 30px 0;
+            background-color: rgba(30, 30, 30, 0.8);
+            padding: 40px 0;
             text-align: center;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         h1 {
-            font-size: 2.5em;
+            font-size: 3.5em;
             color: #4caf50; /* Green accent color */
-            text-shadow: 0 0 10px rgba(76, 175, 80, 0.7);
+            text-shadow: 0 0 20px rgba(76, 175, 80, 0.7);
             margin: 0;
+            animation: pulse 1.5s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
 
         /* Navigation styling */
         nav {
-            background-color: rgba(40, 40, 40, 0.9);
-            padding: 10px;
+            background-color: rgba(30, 30, 30, 0.9);
+            padding: 15px;
             text-align: center;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
 
         nav a {
             color: #4caf50;
             text-decoration: none;
-            font-size: 1em;
-            padding: 8px 12px;
-            margin: 0 10px;
-            border-radius: 5px;
+            font-size: 1.1em;
+            padding: 10px 15px;
+            margin: 0 15px;
             transition: background-color 0.3s ease;
+            border-radius: 5px;
         }
 
         nav a:hover {
             background-color: rgba(76, 175, 80, 0.5);
             color: white;
+            box-shadow: 0 0 15px rgba(76, 175, 80, 0.7);
         }
 
         /* Section styling */
         .section {
-            padding: 30px;
+            padding: 50px;
             z-index: 1;
             display: flex;
             flex-direction: column;
@@ -67,19 +92,24 @@
         }
 
         .box {
-            background-color: rgba(40, 40, 40, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
-            margin-bottom: 30px;
+            background-color: rgba(30, 30, 30, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(76, 175, 80, 0.5);
+            margin-bottom: 40px;
+            transition: transform 0.3s ease-in-out;
             text-align: left; /* Keeps the text inside the box left-aligned */
             max-width: 800px; /* Ensures the box doesn't stretch too wide */
             width: 100%;
         }
 
+        .box:hover {
+            transform: scale(1.05);
+        }
+
         h2 {
             color: #8bc34a;
-            text-shadow: 0 0 8px rgba(139, 195, 74, 0.5);
+            text-shadow: 0 0 10px rgba(139, 195, 74, 0.7);
         }
 
         h3 {
@@ -109,12 +139,16 @@
 
         /* Footer styling */
         footer {
-            background-color: rgba(40, 40, 40, 0.9);
+            background-color: rgba(30, 30, 30, 0.9);
             color: #4caf50;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            font-size: 0.9em;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            font-size: 1.1em;
+        }
+
+        footer p {
+            text-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
         }
 
         footer a {
@@ -140,17 +174,18 @@
 
 <section class="section" id="part1">
     <div class="box">
-        <h2>Part 1. MongoDB Exercise in mongo shell</h2>
-
+        <h2>🔹 Part 1. MongoDB Exercise in mongo shell</h2>
         <h3>- create database</h3>
-        <p>Connect to a running mongo instance, use a database named <code>mongo_practice</code>.</p>
+        <p><strong>Connect to a running mongo instance, use a database named <code>mongo_practice</code>.</strong></p>
+        <h3>Command:</h3>
         <div class="code-block">
             <code>use mongo_practice</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/Usemongo.png?raw=true" alt="usemongo">
 
-        <h3>## Insert Documents</h3>
-        <p>Insert the following documents into a <code>movies</code> collection.</p>
+        <h3>🔹 ## Insert Documents</h3>
+        <p><strong>Insert the following documents into a <code>movies</code> collection.</strong></p>
 
         <h4>Movie: Fight Club</h4>
         <div class="code-block">
@@ -164,9 +199,11 @@ actors : [<br>
 ]
             </code>
         </div>
+        <h3>Command:</h3>
         <div class="code-block">
             <code>db.movies.insert({title:"Fight Club", writer: "Chuck Palahniuk", year: "1999", actors:["Brad Pitt", "Edward Norton"]})</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/chuck.png?raw=true" alt="insertmovie">
 
         <h4>Movie: Pulp Fiction</h4>
@@ -181,9 +218,11 @@ actors : [<br>
 ]
             </code>
         </div>
+        <h3>Command:</h3>
         <div class="code-block">
             <code>db.movies.insert({title:"Pulp Fiction", writer:"Quentin Tarantino", year:"2009", actors:["John Travolta", "Uma Thurman"]})</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/tarantino.png?raw=true" alt="insertmovie">
 
         <h4>Movie: Inglorious Basterds</h4>
@@ -199,9 +238,11 @@ actors : [<br>
 ]
             </code>
         </div>
+        <h3>Command:</h3>
         <div class="code-block">
             <code>db.movies.insert({title:"Inglorious Basterds", writer:"Quentin Tarantino", year:"2009", actors:["Brad Pitt", "Diane Kruger", "Eli Roth"]})</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/basterds.png?raw=true" alt="insertmovie">
 
         <h4>Movie: The Hobbit: An Unexpected Journey</h4>
@@ -213,9 +254,11 @@ year : 2012<br>
 franchise : The Hobbit
             </code>
         </div>
+        <h3>Command:</h3>
         <div class="code-block">
             <code>db.movies.insert({title:"The Hobbit: An unexpected Journey", writer:"J.R.R. Tolkein", year:"2012",franchise:"The Hobbit"})</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/unjourney.png?raw=true" alt="insertmovie">
 
         <h4>Movie: The Hobbit: The Desolation of Smaug</h4>
@@ -227,9 +270,11 @@ year : 2013<br>
 franchise : The Hobbit
             </code>
         </div>
+        <h3>Command:</h3>
         <div class="code-block">
             <code>db.movies.insert({title:"The Hobbit: The Desolation of Smaug", writer:"J.R.R Tolkien", year:"2013", franchise:"The Hobbit"})</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/smaug.png?raw=true" alt="insertmovie">
 
         <h4>Movie: The Hobbit: The Battle of the Five Armies</h4>
@@ -243,132 +288,171 @@ synopsis : Bilbo and Company are forced to engage in a war against an array of c
 and keep the Lonely Mountain from falling into the hands of a rising darkness.
             </code>
         </div>
+        <h3>Command:</h3>
         <div class="code-block">
             <code>db.movies.insert({title:"The Hobbit: The Battle of the Five Armies", writer:"J.R.R Tolkien", year:"2002", franchise:"The Hobbit", synopsis:"Bilbo and Company are forced to engage in a war against an array of combatants and keep the Lonely Mountain from falling into the hands of a rising darkness."})</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/thebattle.png?raw=true" alt="insert movie">
 
         <h4>Movie: Pee Wee Herman's Big Adventure</h4>
         <div class="code-block">
             <code>title : Pee Wee Herman's Big Adventure</code>
         </div>
+        <h3>Command:</h3>
         <div class="code-block">
             <code>db.movies.insert({title:"Pee Wee Herman's Big Adventures"})</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/bigadventure.png?raw=true" alt="insertmovie">
 
         <h4>Movie: Avatar</h4>
         <div class="code-block">
             <code>title : Avatar</code>
         </div>
+        <h3>Command:</h3>
         <div class="code-block">
             <code>db.movies.insert({title:"Avatar"})</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/avatar.png?raw=true" alt="insertmovie">
 
-        <h3>## Query / Find Documents</h3>
+        <h3>🔹 ## Query / Find Documents</h3>
 
         <h4>- get all documents</h4>
+        <h3>Command:</h3>
         <div class="code-block">
             <code>db.movies.find()</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/alldoc.png?raw=true" alt="finddocuments">
 
         <h4>- get all documents with <code>writer</code> set to "Quentin Tarantino"</h4>
+        <h3>Command:</h3>
         <div class="code-block">
             <code>db.movies.find({writer:"Quentin Tarantino"})</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/writtertarantino.png?raw=true" alt="finddocuments">
 
         <h4>- get all documents where <code>actors</code> include "Brad Pitt"</h4>
+        <h3>Command:</h3>
         <div class="code-block">
             <code>db.movies.find({actors:"Brad Pitt"})</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/bradpitt.png?raw=true" alt="finddocuments">
 
         <h4>- get all documents with <code>franchise</code> set to "The Hobbit"</h4>
+        <h3>Command:</h3>
         <div class="code-block">
             <code>db.movies.find({franchise:"The Hobbit"})</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/thehobbit.png?raw=true" alt="finddocuments">
 
         <h4>- get all movies released in the 90s</h4>
+        <h3>Command:</h3>
         <div class="code-block">
             <code>db.movies.find({year:{$gt:"1990", $lt:"2000"}})</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/90's.png?raw=true" alt="finddocuments">
 
         <h4>- get all movies released before the year 2000 or after 2010</h4>
+        <h3>Command:</h3>
         <div class="code-block">
             <code>db.movies.find({$or:[{year:{$gt:"2010"}},{year: {$lt:"2000"}}]})</code>
         </div>
-        <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/2000.png?raw=true" alt="finddocuments">
+        <h3>Result:</h3>
+        <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/2 00.png?raw=true" alt="finddocuments">
 
-        <h3>## Update Documents</h3>
+        <h3>🔹 ## Update Documents</h3>
 
         <h4>- add a synopsis to "The Hobbit: An Unexpected Journey" : "A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home and the gold within it - from the dragon Smaug."</h4>
+        <h3>Command:</h3>
         <div class="code-block">
             <code>db.movies.update({_id:ObjectId("5c9f98e5e5c2dfe9b3729bfe")}, {$set:{synopsis:"A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug."}})</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/updateunexjourney.png?raw=true" alt="updatedocuments">
 
         <h4>- add a synopsis to "The Hobbit: The Desolation of Smaug" : "The dwarves, along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring."</h4>
+        <h3>Command:</h3>
         <div class="code-block">
             <code>db.movies.update({_id:ObjectId("5c9fa42ae5c2dfe9b3729c03")}, {$set:{synopsis:"The dwarves, along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring."}})</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/updatesmaug.png?raw=true" alt="updatedocuments">
 
         <h4>- add an actor named "Samuel L. Jackson" to the movie "Pulp Fiction"</h4>
+        <h3>Command:</h3>
         <div class="code-block">
             <code>db.movies.update({_id:ObjectId("5c9f983ce5c2dfe9b3729bfc")}, {$push:{actors:"Samuel L. Jackson"}})</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/updatepulp.png?raw=true" alt="updatedocuments">
 
-        <h3>## Text Search</h3>
+        <h3>🔹 ## Text Search</h3>
 
         <h4>- find all movies that have a synopsis that contains the word "Bilbo"</h4>
+        <h3>Command:</h3>
         <div class="code-block">
             <code>db.movies.find({synopsis:{$regex:"Bilbo"}})</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/findbilbo.png?raw=true" alt="search">
 
         <h4>- find all movies that have a synopsis that contains the word "Gandalf"</h4>
+        <h3>Command:</h3>
         <div class="code-block">
             <code>db.movies.find({synopsis:{$regex:"Gandalf"}})</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/findgandalf.png?raw=true" alt="search">
 
         <h4>- find all movies that have a synopsis that contains the word "Bilbo" and not the word "Gandalf"</h4>
+        <h3>Command:</h3>
         <div class="code-block">
-            <code>db.movies.find({$and:[{synopsis:{$regex:"Bilbo"}}, {synopsis:{$not:/Gandalf/}}]})</code>
+            <code>db.movies.find({$and:[{synopsis:{$regex:"Bilbo"}}, {$not:{synopsis:{$regex:"Gandalf"}}}]})</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/findbilbonotgandalf.png?raw=true" alt="search">
 
         <h4>- find all movies that have a synopsis that contains the word "dwarves" or "hobbit"</h4>
+        <h3>Command:</h3>
         <div class="code-block">
             <code>db.movies.find({$or:[{synopsis:{$regex:"dwarves"}}, {synopsis:{$regex:"hobbit"}}]})</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/dwarves.png?raw=true" alt="search">
 
         <h4>- find all movies that have a synopsis that contains the word "gold" and "dragon"</h4>
+        <h3>Command:</h3>
         <div class="code-block">
             <code>db.movies.find({$and:[{synopsis:{$regex:"gold"}}, {synopsis:{$regex:"dragon"}}]})</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/dragon.png?raw=true" alt="search">
 
-        <h3>## Delete Documents</h3>
+        <h3>🔹 ## Delete Documents</h3>
 
         <h4>- delete the movie "Pee Wee Herman's Big Adventure"</h4>
+        <h3>Command:</h3>
         <div class="code-block">
-            <code>db.movies.remove({_id:ObjectId("5c9f992ae5c2dfe9b3729c00")})</code>
+            <code>db.movies.deleteOne({title:"Pee Wee Herman's Big Adventures"})</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/deletebigadventure.png?raw=true" alt="delete">
 
         <h4>- delete the movie "Avatar"</h4>
+        <h3>Command:</h3>
         <div class="code-block">
-            <code>db.movies.remove({_id:ObjectId("5c9f9936e5c2dfe9b3729c01")})</code>
+            <code>db.movies.deleteOne({title:"Avatar"})</code>
         </div>
+        <h3>Result:</h3>
         <img src="https://github.com/jrecapor/EDM-John-Paul/blob/main/Final%20Lab%20Task%206/Images/deleteavatar.png?raw=true" alt="delete">
+
     </div>
 </section>
 
